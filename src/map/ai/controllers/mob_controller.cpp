@@ -256,7 +256,8 @@ void CMobController::TryLink()
  * This is used to aggro and deaggro (Mobs start to deaggro after failing to detect target).
  **/
 bool CMobController::CanDetectTarget(CBattleEntity* PTarget, bool forceSight)
-{
+{ // OK i think we can start here by add a check for the ID of the escort ID: 17596834 Wanzo_Unzozo
+  // if (PTarget->isNPC $$ isID(17596834) then kill them!!!)
     TracyZoneScoped;
     if (PTarget->isDead() || PTarget->isMounted())
     {
