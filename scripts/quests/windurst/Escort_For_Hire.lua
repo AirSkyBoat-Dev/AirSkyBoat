@@ -67,6 +67,7 @@ quest.sections =
                             return 60
 
                         -- Players are trying to redo escort
+                        -- Might need to rdo this logic to look for DE_Wanzo-Unzozo depending on the DE_ID assigned.
                         elseif quest:getVar(player, 'Prog') == 2 and not GetMobByID(17596834):isSpawned() then
                             for _, v in ipairs(player:getParty()) do
                                 quest:setVar(v, 'Prog', 1)
@@ -80,7 +81,27 @@ quest.sections =
             onEventFinish =
             {
                 [60] = function(player, csid, option, npc)
-                    SpawnMob(17596834)
+                    local zone = player:getZone()
+                    local wanzo = zone:insertDynamisEntity({
+                        objtype = xi.objType.MOB,
+                        allegiance = xi.allegiance.PLAYER,
+                        name = "Wanzo-Unzozo",
+                        x = -381.1,
+                        y = -12,
+                        z = 398,
+                        minLevel = 45,
+                        maxLevel = 45,
+                        rotation = 1,
+                        groupId = 49,
+                        groupZoneId = 200,
+                        look = 0x01000205111011201130034003507B6000700000,
+                        isAggroable = true,
+                        onTrigger = function() -- i think this is where im going to implement the logic?
+                        end,
+                        onMobDeath = function(mob, playerArg, optParams) -- use this to reset the AI
+                        end,
+                    })
+                    wanzo:spawn()
                     player:getZone():setLocalVar("timer", os.time() + 1800)
                 end,
             },
