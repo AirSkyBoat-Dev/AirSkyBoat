@@ -81,7 +81,7 @@ quest.sections =
             onEventFinish =
             {
                 [60] = function(player, csid, option, npc)
-                    local zone = player:getZone()
+                    local zone = npc:getZone()
                     local wanzo = zone:insertDynamisEntity({
                         objtype = xi.objType.MOB,
                         allegiance = xi.allegiance.PLAYER,
