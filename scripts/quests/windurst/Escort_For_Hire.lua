@@ -67,6 +67,7 @@ quest.sections =
                             return 60
 
                         -- Players are trying to redo escort
+                        -- Might need to rdo this logic to look for DE_Wanzo-Unzozo depending on the DE_ID assigned.
                         elseif quest:getVar(player, 'Prog') == 2 and not GetMobByID(17596834):isSpawned() then
                             for _, v in ipairs(player:getParty()) do
                                 quest:setVar(v, 'Prog', 1)
