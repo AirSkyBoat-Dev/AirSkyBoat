@@ -81,7 +81,8 @@ quest.sections =
             {
                 [60] = function(player, csid, option, npc)
                     SpawnMob(17596834)
-                    player:getZone():setLocalVar("timer", os.time() + 1800)
+                    -- I dont think we will need this for now as i will set this when you talk to him.
+                    -- player:getZone():setLocalVar("timer", os.time() + 1800)
                 end,
             },
         },

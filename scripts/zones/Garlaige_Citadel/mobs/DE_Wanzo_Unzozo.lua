@@ -66,12 +66,8 @@ local route =
 -- Reset Wazon to spawn point and reset AI
 local resetWazon = function(mob)
     DespawnMob(mob:getID())
-    mob:setPos(-381.1,-12,398,1)
     mob:resetAI()
-end
-
-entity.onMobSpawn = function(mob)
-    mob:setAllegiance(xi.allegiance.PLAYER)
+    GetNPCByID(ID.npc.WANZO_UNZOZO):setStatus(xi.status.NORMAL)
 end
 
 entity.onMobTrigger = function(player, mob)
@@ -121,12 +117,13 @@ entity.onMobRoam = function(mob)
         mob:setLocalVar("win", 1)
         mob:timer(30000, function(mobArg)
             mob:messageText(mob, ID.text.BYE_BYE)
-            resetWazon(mob)
+            mob:setStatus(xi.status.INVISIBLE)
+            DespawnMob(mob:getID())
         end)
 
         -- Time up case
-        elseif mob:getZone():getLocalVar("timer") < os.time() then
-            -- resetWazon(mob)
+        elseif mob:getLocalVar("timer") < os.time() then
+            resetWazon(mob)
 
         -- Run case
         elseif mob:getLocalVar("run") == 1 then

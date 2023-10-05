@@ -87,6 +87,7 @@ zones[xi.zone.GARLAIGE_CITADEL] =
         TREASURE_CHEST        = 17596812,
         TREASURE_COFFER       = 17596813,
         CHANDELIER_QM         = 17596830,
+        WANZO_UNZOZO          = 17596834,
     },
 }
 
