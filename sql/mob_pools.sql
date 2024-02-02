@@ -7145,6 +7145,10 @@ INSERT INTO `mob_pools` VALUES (7070,'Mystic_Avatar','Mystic_Avatar',323,0x00001
 -- Garrison NPCs (Only one required)
 INSERT INTO `mob_pools` VALUES (7071,'Garrison','Garrison',145,0x0000B70400000000000000000000000000000000,1,1,1,220,100,0,0,0,0,0,0,8,0,129,0,0,0,2,0,0,145);
 
+-- Escort NPCS
+INSERT INTO `mob_pools` VALUES (20011,'Wanzo-Unzozo','Wanzo-Unzozo',149,0x01000205111011201130034003507B6000700000,2,2,1,480,100,0,0,0,0,64,0,0,0,0,0,0,0,2,0,0,149);
+-- INSERT INTO `mob_pools` VALUES (7057,'Quasilumin','Quasilumin',507,0x0000150400000000000000000000000000000000,1,0,0,240,100,0,0,0,0,64,0,8,0,129,0,0,0,2,0,0,507);
+
 -- Magicked Bones with a Dagger Inner Horutoto Ruins
 INSERT INTO `mob_pools` VALUES (7072,'Magicked_Bones_dagger','Magicked_Bones_dagger',227,0x0000480400000000000000000000000000000000,1,1,5,240,100,0,1,0,0,0,0,0,714,129,0,0,0,0,0,227,227);
 -- ------------------------------------------------------------

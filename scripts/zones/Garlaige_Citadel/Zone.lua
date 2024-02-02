@@ -34,6 +34,9 @@ zoneObject.onInitialize = function(zone)
     GetMobByID(ID.mob.SERKET):setRespawnTime(math.random(900, 10800))
 
     xi.treasure.initZone(zone)
+
+    -- Set escort for hire localvariable to 0
+    zone:setLocalVar('WanzoUnzozoId', 0)
 end
 
 zoneObject.onZoneIn = function(player, prevZone)

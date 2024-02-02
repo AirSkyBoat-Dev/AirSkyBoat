@@ -34,7 +34,14 @@ zones[xi.zone.GARLAIGE_CITADEL] =
         HEAT_FROM_CEILING             = 7308,  -- You feel a terrible heat from the ceiling.
         THE_PRESENCE_MOVES            = 7312,  -- The presence in the ceiling seems to have moved to the east.
         CHEST_UNLOCKED                = 7338,  -- You unlock the chest!
-        ITEMS_ITEMS_LA_LA             = 7465,  -- You can hear a strange voice... Items, items, la la la la la
+        WHATS_WRONG                   = 7453,  -- What's wrong?
+        I_THANK_YOU                   = 7455,  -- I thank you from the bee-bop-bottom of my itsy-bitsy heartaru! You can collect your reward from Dehn!
+        RAN_OUT_OF_TIME               = 7456,  -- Well, ding-dang-dong! We've run out of time!
+        TIME_LIMIT                    = 7458,  -- You have { e:0 } minutes (Earth time) to complete this quest.
+        LOST_SIGHT                    = 7459,  -- You have lost sight of Wanzo-Unzozo...
+        BYE_BYE                       = 7460,  -- I'll see you around sometime! Bye-bee-bye!
+        LETS_GO                       = 7461,  -- I'm ready when you and your buddie-wuddies are. Let's go go go!
+        ITEMS_ITEMS_LA_LA             = 7464,  -- You can hear a strange voice... Items, items, la la la la la
         GOBLIN_SLIPPED_AWAY           = 7471,  -- The Goblin slipped away when you were not looking...
         YOU_COULD_OPEN_THE_GATE       = 7523,  -- If only you had %, you could open the banishing gate...
         THE_GATE_OPENS_FOR_YOU        = 7524,  -- By the power of your %, the gate opens for you.
@@ -75,6 +82,7 @@ zones[xi.zone.GARLAIGE_CITADEL] =
         TREASURE_CHEST        = 17596812,
         TREASURE_COFFER       = 17596813,
         CHANDELIER_QM         = 17596830,
+        WANZO_UNZOZO          = 17596834,
     },
 }
 
